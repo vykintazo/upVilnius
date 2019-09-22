@@ -172,7 +172,7 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
             }
         });
         try {
-            KmlLayer layer = new KmlLayer(mMap, R.raw.lietuvon_kmz, getApplicationContext());
+            KmlLayer layer = new KmlLayer(mMap, R.raw.map, getApplicationContext());
             layer.addLayerToMap();
         } catch (XmlPullParserException | IOException e) {
             e.printStackTrace();
