@@ -13,7 +13,8 @@
     android:orientation="horizontal"
     app:layout_constraintEnd_toEndOf="parent"
     app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toTopOf="parent">
+    app:layout_constraintTop_toTopOf="parent"
+      android:onClick="close">
 
     <androidx.appcompat.widget.AppCompatImageView
       android:layout_width="42dp"
@@ -38,20 +39,19 @@
   </LinearLayout>
 
   <com.google.android.material.textfield.TextInputLayout
+      android:id="@+id/textInputLayout"
+      style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
       android:layout_marginStart="8dp"
       android:layout_marginTop="16dp"
       android:layout_marginEnd="8dp"
-      style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
-      app:boxStrokeWidth="2dp"
-
-      app:hintTextAppearance="?textAppearanceHeadline1"
-      app:startIconDrawable="@drawable/ic_person_black_24dp"
       android:hint="People"
+      app:boxStrokeWidth="2dp"
       app:layout_constraintEnd_toEndOf="parent"
       app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
+      app:layout_constraintTop_toBottomOf="@+id/linearLayout2"
+      app:startIconDrawable="@drawable/ic_person_black_24dp">
 
     <AutoCompleteTextView
         android:id="@+id/filled_exposed_dropdown1"
@@ -59,6 +59,61 @@
         android:layout_height="wrap_content" />
 
   </com.google.android.material.textfield.TextInputLayout>
+
+  <com.google.android.material.textfield.TextInputLayout
+      android:id="@+id/textInputLayout2"
+      style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="8dp"
+      android:layout_marginTop="8dp"
+      android:layout_marginEnd="8dp"
+      android:hint="Sport type"
+      app:boxStrokeWidth="2dp"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/textInputLayout"
+      app:startIconDrawable="@drawable/ic_24px">
+
+    <AutoCompleteTextView
+        android:id="@+id/filled_exposed_dropdown2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+  </com.google.android.material.textfield.TextInputLayout>
+
+  <com.google.android.material.textfield.TextInputLayout
+      android:id="@+id/textInputLayout3"
+      style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="8dp"
+      android:layout_marginTop="8dp"
+      android:layout_marginEnd="8dp"
+      android:hint="Time"
+      app:boxStrokeWidth="2dp"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/textInputLayout2"
+      app:startIconDrawable="@drawable/ic_access_time_black_24dp">
+
+    <AutoCompleteTextView
+        android:id="@+id/filled_exposed_dropdown3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="datetime"
+        android:text="2019/09/22 17:00"/>
+
+  </com.google.android.material.textfield.TextInputLayout>
+
+  <com.google.android.material.button.MaterialButton
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="24dp"
+      android:backgroundTint="@color/color_secondary"
+      android:onClick="close"
+      android:text="Done"
+      app:layout_constraintTop_toBottomOf="@+id/textInputLayout3" />
 <!--  <include-->
 <!--    android:id="@+id/include3"-->
 <!--    layout="@layout/peoplecard"-->
