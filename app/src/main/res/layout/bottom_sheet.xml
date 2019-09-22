@@ -1,0 +1,657 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/bottom_sheet"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    android:orientation="vertical"
+    android:padding="16dp"
+
+    android:elevation="10dp"
+    app:behavior_hideable="false"
+    app:behavior_peekHeight="42dp"
+    app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center|top"
+        android:layout_marginBottom="24dp"
+        >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Išskleisti"
+                android:textAppearance="?textAppearanceBody1"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center|top"
+            android:layout_marginBottom="24dp"
+
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Free hours to spend: "
+                android:textAppearance="?textAppearanceBody2"/>
+            <TextView
+                android:id="@+id/hoursSelected"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1"
+                android:textAppearance="?textAppearanceBody2"/>
+        </LinearLayout>
+            <com.warkiz.widget.IndicatorSeekBar
+                android:id="@+id/seek_bar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:isb_max="8"
+                app:isb_min="1"
+                app:isb_progress="1"
+                app:isb_seek_smoothly="true"
+                app:isb_ticks_count="8"
+                app:isb_show_tick_marks_type="divider"
+                app:isb_tick_marks_size="15dp"
+                app:isb_show_tick_texts="true"
+                app:isb_tick_texts_size="15sp"
+                app:isb_tick_texts_color="@color/color_primary"
+                app:isb_thumb_color="@color/color_secondary"
+                app:isb_thumb_size="20dp"
+                app:isb_show_indicator="rounded_rectangle"
+                app:isb_indicator_color="@color/color_primary"
+                app:isb_indicator_text_color="#fff"
+                app:isb_indicator_text_size="17sp"
+                app:isb_track_background_color="@color/color_primary"
+                app:isb_track_background_size="3dp"
+                app:isb_track_progress_color="@color/color_secondary"
+                app:isb_track_progress_size="5dp"
+                app:isb_only_thumb_draggable="false"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_marginBottom="4dp"
+            android:id="@+id/card1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:strokeColor="#ddd"
+            app:strokeWidth="2dp"
+            app:cardElevation="0dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/card_title5"
+                    android:layout_width="46dp"
+                    android:layout_height="81dp"
+                    android:layout_margin="10dp"
+                    android:layout_weight="0"
+                    android:alpha="?alphaEmphasisHigh"
+                    android:firstBaselineToTopHeight="40dp"
+                    android:src="@drawable/ic_location_on_black_24dp" />
+
+                <LinearLayout
+                    android:layout_width="187dp"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/card_body9"
+                        android:layout_width="165dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:layout_weight="0"
+                        android:alpha="?alphaEmphasisMedium"
+                        android:firstBaselineToTopHeight="@dimen/keyline_5"
+                        android:text="Location"
+                        android:textAppearance="?textAppearanceBody2"
+                        android:textStyle="bold" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/card_text2"
+                        android:layout_width="165dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="0dp"
+                        android:layout_weight="0"
+                        android:alpha="?alphaEmphasisMedium"
+                        android:text="A. Duchausko g. 57"
+                        android:textAppearance="?textAppearanceBody2"
+                        android:textSize="15dp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_marginBottom="4dp"
+            android:id="@+id/card2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:strokeColor="#ddd"
+            app:strokeWidth="2dp"
+            app:cardElevation="0dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/card_title6"
+                    android:layout_width="36dp"
+                    android:layout_height="84dp"
+                    android:layout_margin="10dp"
+                    android:layout_weight="0"
+                    android:alpha="?alphaEmphasisHigh"
+                    android:firstBaselineToTopHeight="40dp"
+                    android:src="@drawable/ic_euro_symbol_black_24dp" />
+
+                <LinearLayout
+                    android:layout_width="91dp"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/card_body8"
+                        android:layout_width="165dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:layout_weight="0"
+                        android:alpha="?alphaEmphasisMedium"
+                        android:firstBaselineToTopHeight="@dimen/keyline_5"
+                        android:text="Price"
+                        android:textAppearance="?textAppearanceBody2"
+                        android:textStyle="bold" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/card_text4"
+                        android:layout_width="165dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="0dp"
+                        android:layout_weight="0"
+                        android:alpha="?alphaEmphasisMedium"
+                        android:text="Pricy"
+                        android:textAppearance="?textAppearanceBody2"
+                        android:textSize="15dp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+    </LinearLayout>
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/color_secondary"
+                android:text="Search"
+                android:onClick="results"/>
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:layout_weight="0"
+        android:firstBaselineToTopHeight="@dimen/keyline_5"
+        android:text="Categories"
+        android:textAlignment="center"
+        android:textAppearance="?textAppearanceBody2"
+        android:textStyle="bold"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center|top">
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
+            android:minHeight="200dp"
+            app:cardElevation="0dp"
+            app:strokeColor="#ddd"
+            app:strokeWidth="2dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/appCompatImageView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_weight="0"
+                    android:alpha="?alphaEmphasisHigh"
+                    android:firstBaselineToTopHeight="40dp"
+                    android:src="@drawable/ic_color_lens_black_24dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/textView2"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/textView2" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/textView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:alpha="?alphaEmphasisHigh"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="16dp"
+                    android:text="Art"
+                    android:textAppearance="?textAppearanceHeadline1"
+                    android:textColor="#000"
+                    app:layout_constraintStart_toEndOf="@+id/appCompatImageView"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.google.android.material.chip.ChipGroup
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginBottom="8dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView2">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="top"
+                        android:weightSum="2">
+                    <com.google.android.material.chip.Chip
+                        android:layout_margin="4dp"
+                        android:textAlignment="center"
+                        style="@style/CustomChipChoice1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?textAppearanceBody1"
+                        android:layout_weight="1"
+                        android:text="Theatre" />
+
+                    <com.google.android.material.chip.Chip
+                        android:layout_margin="4dp"
+                        android:textAlignment="center"
+                        style="@style/CustomChipChoice1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?textAppearanceBody1"
+                        android:layout_weight="1"
+                        android:text="Exihibitions" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="top"
+                        android:weightSum="2">
+                        <com.google.android.material.chip.Chip
+                            android:layout_margin="4dp"
+                            android:textAlignment="center"
+                            style="@style/CustomChipChoice1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?textAppearanceBody1"
+                            android:layout_weight="1"
+                            android:text="Museums" />
+
+                        <com.google.android.material.chip.Chip
+                            android:layout_margin="4dp"
+                            android:textAlignment="center"
+                            style="@style/CustomChipChoice1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?textAppearanceBody1"
+                            android:layout_weight="1"
+                            android:text="Movie theatres" />
+                    </LinearLayout>
+                </com.google.android.material.chip.ChipGroup>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.google.android.material.card.MaterialCardView>
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
+            android:minHeight="200dp"
+            app:cardElevation="0dp"
+            app:strokeColor="#ddd"
+            app:strokeWidth="2dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/appCompatImageView00"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_weight="0"
+                    android:alpha="?alphaEmphasisHigh"
+                    android:firstBaselineToTopHeight="40dp"
+                    android:src="@drawable/ic_local_play_black_24dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/textView25"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/textView25" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/textView25"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:alpha="?alphaEmphasisHigh"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="16dp"
+                    android:text="Events"
+                    android:textAppearance="?textAppearanceHeadline1"
+                    android:textColor="#000"
+                    app:layout_constraintStart_toEndOf="@+id/appCompatImageView00"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.google.android.material.chip.ChipGroup
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginBottom="8dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView25">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="top"
+                        android:weightSum="2">
+                        <com.google.android.material.chip.Chip
+                            android:layout_margin="4dp"
+                            android:textAlignment="center"
+                            style="@style/CustomChipChoice2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?textAppearanceBody1"
+                            android:layout_weight="1"
+                            android:text="Concerts" />
+
+                        <com.google.android.material.chip.Chip
+                            android:layout_margin="4dp"
+                            android:textAlignment="center"
+                            style="@style/CustomChipChoice2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?textAppearanceBody1"
+                            android:layout_weight="1"
+                            android:text="Conferences" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="top"
+                        android:weightSum="2">
+                        <com.google.android.material.chip.Chip
+                            android:layout_margin="4dp"
+                            android:textAlignment="center"
+                            style="@style/CustomChipChoice2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?textAppearanceBody1"
+                            android:layout_weight="1"
+                            android:text="Fairs" />
+
+                        <com.google.android.material.chip.Chip
+                            android:layout_margin="4dp"
+                            android:textAlignment="center"
+                            style="@style/CustomChipChoice2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?textAppearanceBody1"
+                            android:layout_weight="1"
+                            android:text="Festivals" />
+                    </LinearLayout>
+                </com.google.android.material.chip.ChipGroup>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.google.android.material.card.MaterialCardView>
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
+            android:minHeight="200dp"
+            app:cardElevation="0dp"
+            app:strokeColor="#ddd"
+            app:strokeWidth="2dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/appCompatImageView6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_weight="0"
+                    android:alpha="?alphaEmphasisHigh"
+                    android:firstBaselineToTopHeight="40dp"
+                    android:src="@drawable/ic_directions_bike_black_24dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/textView77"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/textView77" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/textView77"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:alpha="?alphaEmphasisHigh"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="16dp"
+                    android:text="Sport"
+                    android:textAppearance="?textAppearanceHeadline1"
+                    android:textColor="#000"
+                    app:layout_constraintStart_toEndOf="@+id/appCompatImageView6"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.google.android.material.chip.ChipGroup
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginBottom="8dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView77">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="top"
+                        android:weightSum="2">
+                        <com.google.android.material.chip.Chip
+                            android:layout_margin="4dp"
+                            android:textAlignment="center"
+                            style="@style/CustomChipChoice3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?textAppearanceBody1"
+                            android:layout_weight="1"
+                            android:text="Basketball" />
+
+                        <com.google.android.material.chip.Chip
+                            android:layout_margin="4dp"
+                            android:textAlignment="center"
+                            style="@style/CustomChipChoice3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?textAppearanceBody1"
+                            android:layout_weight="1"
+                            android:text="Football" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="top"
+                        android:weightSum="2">
+                        <com.google.android.material.chip.Chip
+                            android:layout_margin="4dp"
+                            android:textAlignment="center"
+                            style="@style/CustomChipChoice3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?textAppearanceBody1"
+                            android:layout_weight="1"
+                            android:text="Baseball" />
+
+                        <com.google.android.material.chip.Chip
+                            android:layout_margin="4dp"
+                            android:textAlignment="center"
+                            style="@style/CustomChipChoice3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?textAppearanceBody1"
+                            android:layout_weight="1"
+                            android:text="Tennis" />
+                    </LinearLayout>
+                </com.google.android.material.chip.ChipGroup>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.google.android.material.card.MaterialCardView>
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
+            android:minHeight="200dp"
+            app:cardElevation="0dp"
+            app:strokeColor="#ddd"
+            app:strokeWidth="2dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/appCompatImageView3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_weight="0"
+                    android:alpha="?alphaEmphasisHigh"
+                    android:firstBaselineToTopHeight="40dp"
+                    android:src="@drawable/ic_beach_access_black_24dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/textView44"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/textView44" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/textView44"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:alpha="?alphaEmphasisHigh"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="16dp"
+                    android:text="Tourism"
+                    android:textAppearance="?textAppearanceHeadline1"
+                    android:textColor="#000"
+                    app:layout_constraintStart_toEndOf="@+id/appCompatImageView3"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.google.android.material.chip.ChipGroup
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginBottom="8dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView44">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="top"
+                        android:weightSum="2">
+                        <com.google.android.material.chip.Chip
+                            android:layout_margin="4dp"
+                            android:textAlignment="center"
+                            style="@style/CustomChipChoice1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?textAppearanceBody1"
+                            android:layout_weight="1"
+                            android:text="Restaurants" />
+
+                        <com.google.android.material.chip.Chip
+                            android:layout_margin="4dp"
+                            android:textAlignment="center"
+                            style="@style/CustomChipChoice1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?textAppearanceBody1"
+                            android:layout_weight="1"
+                            android:text="Tourist attractions" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="top"
+                        android:weightSum="2">
+                        <com.google.android.material.chip.Chip
+                            android:layout_margin="4dp"
+                            android:textAlignment="center"
+                            style="@style/CustomChipChoice1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?textAppearanceBody1"
+                            android:layout_weight="1"
+                            android:text="Archeological sites" />
+
+                        <com.google.android.material.chip.Chip
+                            android:layout_margin="4dp"
+                            android:textAlignment="center"
+                            style="@style/CustomChipChoice1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?textAppearanceBody1"
+                            android:layout_weight="1"
+                            android:text="Exursions" />
+                    </LinearLayout>
+                </com.google.android.material.chip.ChipGroup>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.google.android.material.card.MaterialCardView>
+    </LinearLayout>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>

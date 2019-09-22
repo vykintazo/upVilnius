@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="start|top"
+        android:paddingBottom="16dp"
+        android:onClick="close">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/card_title5467"
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:alpha="?alphaEmphasisHigh"
+            android:src="@drawable/ic_arrow_back_black_24dp" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/card_body33"
+            style="?textAppearanceHeadline1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="10dp"
+            android:alpha="?alphaEmphasisHigh"
+            android:text="Results"
+            android:textAppearance="?textAppearanceBody2"
+            android:textColor="#000000"
+            android:textSize="35dp" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="start|top"
+        android:padding="16dp"
+        >
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="200dp"
+        app:cardElevation="0dp"
+        app:strokeColor="#ddd"
+        app:strokeWidth="2dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <fragment
+                android:id="@+id/map2"
+                android:name="com.google.android.gms.maps.SupportMapFragment"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:context=".MapsActivity" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="16dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/map2">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/card_body4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/keyline_5"
+                    android:alpha="?alphaEmphasisMedium"
+                    android:firstBaselineToTopHeight="@dimen/keyline_5"
+                    android:text="3 places"
+                    android:textAppearance="?textAppearanceBody2"
+                    app:layout_constraintBottom_toBottomOf="@+id/card_title4"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.094"
+                    app:layout_constraintStart_toEndOf="@+id/card_title4"
+                    app:layout_constraintTop_toTopOf="@+id/card_title4"
+                    app:layout_constraintVertical_bias="1.0" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/card_body5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:alpha="?alphaEmphasisHigh"
+                    android:firstBaselineToTopHeight="@dimen/keyline_5"
+                    android:text="€0.97"
+                    android:textAppearance="?textAppearanceBody2"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.937"
+                    app:layout_constraintStart_toEndOf="@+id/card_title"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.507" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/card_title4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:alpha="?alphaEmphasisHigh"
+                    android:firstBaselineToTopHeight="40dp"
+                    android:src="@drawable/ic_location_on_black_24dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/card_body2"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.254"
+                    app:layout_constraintStart_toEndOf="@+id/card_title2"
+                    app:layout_constraintTop_toTopOf="@+id/card_body2"
+                    app:layout_constraintVertical_bias="1.0" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/card_title3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:alpha="?alphaEmphasisHigh"
+                    android:firstBaselineToTopHeight="40dp"
+                    android:src="@drawable/ic_directions_bus_black_24dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/card_body"
+                    app:layout_constraintStart_toEndOf="@+id/card_body"
+                    app:layout_constraintTop_toTopOf="@+id/card_body"
+                    app:layout_constraintVertical_bias="1.0" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/card_body3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/keyline_5"
+                    android:alpha="?alphaEmphasisMedium"
+                    android:firstBaselineToTopHeight="@dimen/keyline_5"
+                    android:text="3 stops"
+                    android:textAppearance="?textAppearanceBody2"
+                    app:layout_constraintBottom_toBottomOf="@+id/card_title3"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.089"
+                    app:layout_constraintStart_toEndOf="@+id/card_title3"
+                    app:layout_constraintTop_toTopOf="@+id/card_title3"
+                    app:layout_constraintVertical_bias="1.0" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/card_body2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/keyline_5"
+                    android:alpha="?alphaEmphasisMedium"
+                    android:firstBaselineToTopHeight="@dimen/keyline_5"
+                    android:text="2.3h"
+                    android:textAppearance="?textAppearanceBody2"
+                    app:layout_constraintBottom_toBottomOf="@+id/card_title2"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.031"
+                    app:layout_constraintStart_toEndOf="@+id/card_title"
+                    app:layout_constraintTop_toTopOf="@+id/card_title2"
+                    app:layout_constraintVertical_bias="1.0" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/card_title2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:alpha="?alphaEmphasisHigh"
+                    android:firstBaselineToTopHeight="40dp"
+                    android:src="@drawable/ic_access_time_black_24dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/card_body2"
+                    app:layout_constraintHorizontal_bias="0.333"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/card_title"
+                    app:layout_constraintVertical_bias="0.625" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/card_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:alpha="?alphaEmphasisHigh"
+                    android:firstBaselineToTopHeight="40dp"
+                    android:src="@drawable/ic_directions_walk_black_24dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/card_body"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/keyline_5"
+                    android:alpha="?alphaEmphasisMedium"
+                    android:firstBaselineToTopHeight="@dimen/keyline_5"
+                    android:text="3.9km"
+                    android:textAppearance="?textAppearanceBody2"
+                    app:layout_constraintBottom_toBottomOf="@+id/card_title"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.031"
+                    app:layout_constraintStart_toEndOf="@+id/card_title"
+                    app:layout_constraintTop_toTopOf="@+id/card_title"
+                    app:layout_constraintVertical_bias="1.0" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+    </LinearLayout>
+
+</LinearLayout>
