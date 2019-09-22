@@ -20,7 +20,14 @@
         android:name=".ResultsActivity"
         android:label="Results">
 
+
     </activity>
+        <activity
+            android:name=".CreateEvent"
+            android:label="Create">
+
+        </activity>
+
         <activity
             android:name=".SplashActivity"
             android:label="Login">
